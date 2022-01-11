@@ -28,6 +28,14 @@
         crossorigin="anonymous"></script>
 
     <script>
+        function fastFood() {
+            if (document.getElementById('fastFood').style.display === '') {
+                document.getElementById('fastFood').style.display = 'none';
+            } else {
+                document.getElementById('fastFood').style.display = '';
+            }
+        }
+
 
         $('#myModal').on('shown.bs.modal', function () {
             $('#myInput').trigger('focus')
@@ -157,7 +165,7 @@
 <!--category-->
     <div class="category">
         <ui class="category_title">
-            <li>간편식</li>
+            <li onclick="fastFood()">간편식</li>
             <li>해장</li>
             <li>비오는날</li>
             <li>비건</li>
@@ -165,18 +173,8 @@
     </div>
 
 <!--foodCard-->
-    <div class="foodCard">
+    <div id="fastFood" class="foodCard">
         <div class="cardForm" type="button" data-toggle="modal" data-target="#exampleModalLong" onclick = "console.log('눌림')">
-            <img class="image" src="../static/image/food_5.jpg" width="300"></img>
-            <div class="title">
-                <h4>아보카도 도시락</h4>
-                <p>Like(good)</p>
-            </div>
-            <div class="comment">
-                <p>밥위에 아보카도를 올린 도시락</p>
-            </div>
-        </div>
-        <div class="cardForm">
             <img class="image" src="../static/image/food_5.jpg" width="300"></img>
             <div class="title">
                 <h4>아보카도 도시락</h4>
@@ -233,6 +231,10 @@
                 </table>
             </div>
         </div>
+    </div>
+</div>
+</body>
+</html>
     </div>
 </div>
 </body>
